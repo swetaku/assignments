@@ -1,0 +1,90 @@
+.nav{
+ ul{
+ float:right;
+ height: auto;
+ padding: 8px 0px;
+ margin: 0px;
+ }
+ li{
+ display: inline; 
+ padding: 1px 2px 0 5px;
+ }
+ }
+ 
+ @mixin comprop($bg-color , $ht , $wid)
+ {
+	background-color:$bg-color;
+	height: $ht;
+	width: $wid;
+ }
+ .wrapper{
+ @include comprop(white , 800px , auto);
+ }
+ .header{
+ @include comprop(black , 60px , auto);
+ position:relative;
+ border-bottom:5px solid #ADD8E6;
+ }
+ 
+.name{
+ margin-left:60%;
+ margin-top:-30%;
+ color:white;
+ margin-right:1px dotted white;
+}
+
+.descp{
+position:absolute;
+display:inline;
+float:left;
+margin-left:70%;
+margin-right:1px dotted white;
+}
+
+.formbody{
+
+padding:0 10% 0 10%;
+}
+
+
+.forminfo{
+
+border-bottom:1px solid black;
+}
+.space{
+@include comprop(grey , 120px , 120px);
+}
+
+.imageup{
+float:left;
+}
+
+.tasks{
+
+ input:hover{
+  display: inline-block;
+ 
+  float: left;}
+  margin-top:100%;
+padding:1% 5% 1% 80%;
+background-color:grey;
+}
+.footer{
+@include comprop(black , 40px , auto);
+}
+
+.formdet{
+
+ label{
+   display: inline-block;
+    float: left;
+    clear: left;
+    width: 160px;
+    text-align: left;
+ }
+ 
+ 
+margin-left:5%;
+float:right;
+ 
+}
