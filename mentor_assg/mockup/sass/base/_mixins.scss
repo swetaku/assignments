@@ -1,0 +1,6 @@
+ @mixin comprop($bg-color , $ht , $wid)
+ {
+	background-color:$bg-color;
+	height: $ht;
+	width: $wid;
+ }

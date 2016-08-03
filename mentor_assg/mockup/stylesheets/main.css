@@ -1,0 +1,100 @@
+/* line 2, ../sass/modules/_form.scss */
+.nav ul {
+  float: right;
+  height: auto;
+  padding: 8px 0px;
+  margin: 0px;
+}
+/* line 8, ../sass/modules/_form.scss */
+.nav li {
+  display: inline;
+  padding: 1px 2px 0 5px;
+}
+
+/* line 20, ../sass/modules/_form.scss */
+.wrapper {
+  background-color: white;
+  height: 800px;
+  width: auto;
+}
+
+/* line 23, ../sass/modules/_form.scss */
+.header {
+  background-color: black;
+  height: 60px;
+  width: auto;
+  position: relative;
+  border-bottom: 5px solid #ADD8E6;
+}
+
+/* line 29, ../sass/modules/_form.scss */
+.name {
+  margin-left: 60%;
+  margin-top: -30%;
+  color: white;
+  margin-right: 1px dotted white;
+}
+
+/* line 36, ../sass/modules/_form.scss */
+.descp {
+  position: absolute;
+  display: inline;
+  float: left;
+  margin-left: 70%;
+  margin-right: 1px dotted white;
+}
+
+/* line 44, ../sass/modules/_form.scss */
+.formbody {
+  padding: 0 10% 0 10%;
+}
+
+/* line 50, ../sass/modules/_form.scss */
+.forminfo {
+  border-bottom: 1px solid black;
+}
+
+/* line 54, ../sass/modules/_form.scss */
+.space {
+  background-color: grey;
+  height: 120px;
+  width: 120px;
+}
+
+/* line 58, ../sass/modules/_form.scss */
+.imageup {
+  float: left;
+}
+
+/* line 62, ../sass/modules/_form.scss */
+.tasks {
+  margin-top: 100%;
+  padding: 1% 5% 1% 80%;
+  background-color: grey;
+}
+/* line 64, ../sass/modules/_form.scss */
+.tasks input:hover {
+  display: inline-block;
+  float: left;
+}
+
+/* line 72, ../sass/modules/_form.scss */
+.footer {
+  background-color: black;
+  height: 40px;
+  width: auto;
+}
+
+/* line 76, ../sass/modules/_form.scss */
+.formdet {
+  margin-left: 5%;
+  float: right;
+}
+/* line 78, ../sass/modules/_form.scss */
+.formdet label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 160px;
+  text-align: left;
+}
