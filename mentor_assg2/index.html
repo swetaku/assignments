@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+		<script type="text/javascript" src="validation.js">
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="descp">
+					<img src="face.jpg" height="40px" width="40px">;
+					<h4 class="name">Sweta Kumari</h4>
+				</div>
+				<div class="nav">
+				 <ul>
+					<li><img src="qm.png" height="25px" width="25px"></li>
+					<li><img src="set.jpg" height="25px" width="25px"></li>
+					<li><img src="pow.png" height="25px" width="25px"></li>
+				 </ul>
+				</div>
+			</header>
+			<div class="formbody">
+			    <div class="forminfo"><p>User Profile</p> </div>
+				<div>
+				<span id="errormsg"></span>
+				</div>
+				<div class="imageup">
+					<div class="space"></div>
+					<form>
+					<p>
+						Upload profile picture<br>
+						<input type="text" name="textline" size="30">
+					</p>
+					
+					<input type="file" name="datafile" size="40">
+					</p>
+					<div>
+					<input type="submit" value="Upload">
+					</div>
+					</form>
+                </div>
+				
+                <div class="formdet">
+					<h4>Login Information</h4>
+					<form id="myform">
+					   <label id="m1">User name:</label><input type="text" name="uname"><span id="unamemsg"></span><br><br>
+					   <label id="m2">Email id:</label><input type="text" name="eid"><span id="eidmsg"></span><br><br>
+					   <label id="m3">Password:</label><input id="pd1" type="password" name="pwd"><span id="pwdmsg"></span><br><br>
+					   <label id="m4">Confirm password:</label><input id="pd2" type="password" name="cpwd"><span id="cpwdmsg"></span><br><br>
+					   <label id="m5">Access level:</label>
+					   admin
+						<input type="radio" name="editLst" value="Admin">
+						User
+						<input type="radio" name="editLst" value="User">
+					 </form>
+						<br>
+						
+					<h4>Personal Information</h4>
+					<form id="myform1">
+					   <label>First name:</label><input type="text" name="firstname"><br><br>
+					   <label>Last name:</label><input type="text" name="lastname"><br><br>
+					   <label id="m6">Employee Id:</label><input type="text" name="empid"><span id="empidmsg"></span><br><br>
+					   <label>Location:</label><input type="text" name="loc"><br><br>
+					   <label>About:</label><input type="text" name="abt"><br><br>
+					</form>
+					<h4>Add new greeting</h4>
+					<form>
+					
+						Upload greeting:
+					<p>
+						<input type="text" name="textline" size="30">
+					</p>
+					
+					<input type="file" name="datafile" size="40">
+					<p style="color:green;">(upload greeting in .jpg , .png or .pgf format only)</p>
+					<div>
+					<input type="submit" value="Browse..">
+					</div>
+					<br>
+					<br>
+					<div style="height:70px; width:270px; border:1px solid black;">
+						<p style="text-align:center;">No image</p>
+					</div>
+					
+					</form>
+				</div>
+				<div class="tasks">
+				<input id="button1" type="submit" name="save" value="Save" onclick="validate();">
+				<input id="button2" type="submit" name="cancel" value="Cancel" onclick="reset();">
+		        </div>
+			</div>
+		<br>
+        <footer class="footer">
+		</footer>		
+			
+		</div>
+		
+		
+		
+	</body>
+</html>

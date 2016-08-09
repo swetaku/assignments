@@ -1,0 +1,55 @@
+<html>
+  <body>
+   <script>
+	var abc=["my name" , "my company"];        //string array "abc".
+	function search1(){                       //first searching method that uses indexOf() method.
+ 	var pos = abc.indexOf("myname");
+	var posnew = abc.indexOf("my company");
+	console.log(pos);                     //just to check on console the position of the found element.
+	console.log(posnew);
+	if(posnew==-1){                   //indexOf() returns -1 in case the element is not found in the array. 
+		document.write("not found");
+	}
+	else{
+		document.write("found");
+	}
+	}
+	var t0 = performance.now();     //performance.now() method returns the current time.
+    search1();
+    var t1 = performance.now();
+    document.write("Call to search1() took " + (t1 - t0) + " milliseconds.<br/>");//subtract time before execution and after will give execution time. 
+	
+	
+	var abc1=["my name" , "my company"];  //an array of strings "abc1".
+	
+	function search2(){             //search2() uses inbuilt function find() to search the result.
+	function checkString(str) {
+    return str === "mycompany";
+   }
+
+   function myFunction() {
+    document.write("<br/>data is:"+abc1.find(checkString));
+}
+  myFunction(); 
+}
+    var t2 = performance.now();   
+    search2();
+    var t3 = performance.now();
+    document.write("Call to search2() took " + (t3 - t2) + " milliseconds.<br/>");//calculated the performance time of sarch2().  
+    
+	
+	function search3(){                 //search method3 using search() method on string
+	  var res=abc1.toString().search("my name");
+     if(res==-1)
+        document.write("Required string not found<br/>");
+     else
+        document.write("Required string found<br/>");
+   }
+   
+   var t4 = performance.now();         //calculating the performance
+    search3();
+    var t5 = performance.now();
+    document.write("Call to search3() took " + (t5 - t4) + " milliseconds.<br/>");
+	</script>
+ </body>
+</html> 
