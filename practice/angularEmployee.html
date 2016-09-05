@@ -28,11 +28,11 @@
 			<td>{{emp.dateOfJoining}}</td>
 			<td>{{emp.extension}}</td>
 			<td>{{emp.isOnBench | booleanyesno}}</td>
-			<td> <button id="eb" ng-click="edit(empdata)">edit</button> &nbsp; &nbsp;<input type="button" ng-click="del(emp)" value="Delete" data-toggle="modal" data-target="#myModal">
+			<td> <button id="eb" ng-click="edit(emp)">edit</button> &nbsp; &nbsp;<input type="button" ng-click="del(emp)" value="Delete" data-toggle="modal" data-target="#myModal">
 		</tr>
 		
 	    </table>
-	</div>
+	
 	
 	<div id="updateform">
 				<form>
@@ -62,7 +62,7 @@
       </div>
       <div class="modal-footer">
         <button type="button"  data-dismiss="modal">Cancel</button>
-        <button type="button" ng-click="delemp(Employees)"data-dismiss="modal">Ok</button>
+        <button type="button" ng-click="delemp(emp)"data-dismiss="modal">Ok</button>
       </div>
     </div>
   </div>
