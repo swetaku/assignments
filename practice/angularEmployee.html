@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" ></link>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+      </script> 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="empfunctions.js"></script>
+</head>
+
+<body ng-app="myApp">
+	<div ng-controller="myController">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addEmp" >Add Employee</button>
+		<table id="searchTextResults" border="2">
+		<tr>
+			<td ng-click="sort('firstname')">FirstName</td>
+			<td ng-click="sort('lastname')">LastName</td>
+			<td ng-click="sort('email')">Email</td>
+			<td ng-click="sort('dateOfJoining')">DateOfJoining</td>
+			<td ng-click="sort('extension')">Extension</td>
+		    <td ng-click="sort('isOnBench')">isOnBench</td>
+		</tr>
+		<tr ng-repeat="emp in empdata | orderBy: chk+search_propname ">
+			<td>{{emp.firstname}}</td>
+			<td>{{emp.lastname}}</td>
+			<td>{{emp.email}}</td>
+			<td>{{emp.dateOfJoining}}</td>
+			<td>{{emp.extension}}</td>
+			<td>{{emp.isOnBench | booleanyesno}}</td>
+			<td> <button id="eb" ng-click="edit(empdata)">edit</button> &nbsp; &nbsp;<input type="button" ng-click="del(emp)" value="Delete" data-toggle="modal" data-target="#myModal">
+		</tr>
+		
+	    </table>
+	</div>
+	
+	<div id="updateform">
+				<form>
+				<h1>Ur details.{{employee_edit.firstname}} </h1>
+				Firstname:<input type="text" value="{{employee_edit.firstname}}" ng-model="employee_edit.firstname" ><br/><br/>
+				Lastname:<input type="text" value="{{employee_edit.lastname}}" ng-model="employee_edit.lastname"><br/><br/>
+				Email-Id:<input type="text"  value="{{employee_edit.email}}" ng-model="employee_edit.email"><br/><br/>
+				Date of Joining:<input type="text"  value="{{employee_edit.dateOfJoining}}" ng-model="employee_edit.dateOfJoining"><br/><br/>
+				Extension:<input type="text"  value="{{employee_edit.extension}}" ng-model="employee_edit.extension"><br/><br/>
+				Isonbench:<input type="text"  value="{{employee_edit.isOnBench}}" ng-model="employee_edit.isOnBench"><br/><br/>
+				
+				<input type="button" value="Update" ng-click="edit(employee_edit)">
+		<!-- Button trigger modal -->
+
+  
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Alert</h4>
+      </div>
+      <div class="modal-body">
+        Are You Sure You want to Delete Record ?
+      </div>
+      <div class="modal-footer">
+        <button type="button"  data-dismiss="modal">Cancel</button>
+        <button type="button" ng-click="delemp(Employees)"data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="addEmp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add New Employee Details</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+				<h1>Add new employee  </h1>
+				Firstname:<input type="text"  ng-model="employee_new.firstname" ><br/><br/>
+				Lastname:<input type="text"  ng-model="employee_new.lastname"><br/><br/>
+				Email-Id:<input type="text"   ng-model="employee_new.email"><br/><br/>
+				Date of Joining:<input type="text"   ng-model="employee_new.dateOfJoining"><br/><br/>
+				Extension:<input type="text"   ng-model="employee_new.extension"><br/><br/>
+				Isonbench:<input type="text"   ng-model="employee_new.isOnBench"><br/><br/>
+				
+				
+      </div>
+      <div class="modal-footer">
+        <button type="button"  data-dismiss="modal">Cancel</button>
+        <button type="button" value="Add Employeee" ng-click="add(employee_new)" data-dismiss="modal">Add Employee</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+</div>
+	</div>
+	
+</body>

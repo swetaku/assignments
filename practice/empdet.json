@@ -1,0 +1,5 @@
+{"Employees":[{"firstname":"Sweta","lastname":"Kumari","email":"swetak@cybage.com","dateOfJoining":"11/7/16","extension":"8029","isOnBench":"false"},{"firstname":"Jainik","lastname":"Khokhani","email":"jainikk@cybage.com","dateOfJoining":"12/7/16",
+"extension":"6422","isOnBench":"true"},{"firstname":"Shibayan","lastname":"Chakraborty","email":"shibayanc@cybage.com","dateOfJoining":"13/7/16",
+"extension":"6267","isOnBench":"false"},{"firstname":"Anvita","lastname":"Jadhav","email":"anvitaj@cybage.com","dateOfJoining":"14/7/16",
+"extension":"8024","isOnBench":"true"},{"firstname":"Vrushali","lastname":"Ingale","email":"vrushalii@cybage.com","dateOfJoining":"15/7/16",
+"extension":"8061","isOnBench":"false"}]}
