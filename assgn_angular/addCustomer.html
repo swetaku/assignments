@@ -1,0 +1,19 @@
+
+	    <div ng-controller="cd">
+		<label>Customer name:<input type="text" ng-model="custDet.name"/></label><br/>
+		<label>Customer id:<input type="text" ng-model="custDet.id"/></label><br/>
+		<label>Customer phone:<input type="text" ng-model="custDet.phone"/></label><br/>
+		
+		
+		<table id="searchTextResults" border="2">
+		<tr><th>Name</th><th>ID</th><th>Phone</th></tr>
+		<tr ng-repeat="c in custDet">
+			<td>{{c.name}}</td>
+			<td>{{c.id}}</td>
+			<td>{{c.phone}}</td>
+		</tr>
+		<button type="button" onclick="addItem1(custDet)">Add</button>
+	</table>
+	
+		</div>
+	

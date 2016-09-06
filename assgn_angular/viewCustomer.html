@@ -1,0 +1,13 @@
+
+	    
+		<p ng-controller="viewCustomerCtrl">{{msg}}</p>
+		
+	<table ng-controller="cd" id="searchTextResults" border="2">
+		<tr><th>Name</th><th>ID</th><th>Phone</th></tr>
+		<tr ng-repeat="c in custDet">
+			<td>{{c.name}}</td>
+			<td>{{c.id}}</td>
+			<td>{{c.phone}}</td>
+		</tr>
+		
+	</table>

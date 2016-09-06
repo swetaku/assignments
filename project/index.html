@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+		
+		<script src="bookdata.js"></script>
+		<style>
+			header{
+			  border-bottom: 1px solid black;
+			  
+			}
+		</style>
+	</head>
+	<body ng-controller="myController">
+		<header>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBook" >Add new Book</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAuthor" >Add new Author</button><br/><br/>
+		</header>
+		<a href="#addBook">Add BOOK</a>
+		<a href="#viewCustomer">View Customers</a>
+		<div ng-view>
+			<table class="table table-hover table-bordered table-responsive">
+				<tr><th>ISBN NO.</th><th>TITLE</th><th>AUTHOR</th></tr>
+				<tr ng-repeat="book in bookdet">
+					<td>{{book.isbn}}</td>
+					<td>{{book.title}}</td>
+					<td>{{book.author}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
