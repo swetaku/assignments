@@ -1,0 +1,34 @@
+.sec1{
+    border-top:2px solid #ff7173; 
+    height:100px;
+    width:auto;
+    background-color: lavenderblush; 
+}
+
+div.position{
+    float:left;
+    display:inline-block;
+    margin-left:600px;
+    margin-top: -53px;
+    width:50%;
+}
+.topbar{
+     float:left;
+     margin-left: 30%;
+     width:50%; 
+}
+
+.heading{
+    font-family: fantasy;
+    color:#ff7173;
+}
+
+.subhead{
+   margin-top:-20px;
+}
+
+.navbar li{
+    display:inline-block;
+    padding: 3px;
+}
+
